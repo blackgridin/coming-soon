@@ -74,10 +74,16 @@ body {
 }
 
 .title {
-  font-weight: 800;
-  letter-spacing: 0.45em;
-  text-indent: 0.45em;
-  font-size: clamp(16px, 3vw, 28px);
+  color: #FFF;
+font-family: 'Inter', sans-serif;
+font-size: 158.042px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+letter-spacing: -4px;
+  
+
+
 }
 .sub {
   color: var(--muted);
@@ -91,4 +97,29 @@ body {
 }
 .contact a:hover {
   text-decoration: underline;
+}
+
+.nav-item {
+  color: white;
+  cursor: pointer;
+  position: relative;
+  display: block;
+  width: fit-content;
+  margin-bottom: 4px;
+  text-decoration: none; /* Ensure no default underline for links */
+}
+
+.nav-item::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transition: width 0.3s ease-out;
+}
+
+.nav-item:hover::after {
+  width: 100%;
 }
